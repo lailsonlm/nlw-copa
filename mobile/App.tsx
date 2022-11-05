@@ -14,7 +14,7 @@ export default function App() {
   return (
     <NativeBaseProvider theme={THEME}>
       <AuthContextProvider>
-        { fontsLoaded ? <Pools /> : <Loading /> }
+        { fontsLoaded ? <SignIn /> : <Loading /> }
         <StatusBar 
           barStyle="light-content"
           backgroundColor="transparent"
