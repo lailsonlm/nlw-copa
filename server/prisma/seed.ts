@@ -6,7 +6,7 @@ async function main() {
   const user = await prisma.user.create({
     data: {
       name: 'John Doe',
-      email: 'john.doe@hotmail.com',
+      email: 'john@hotmail.com',
       avatarUrl: 'http://github.com/lailsonlm.png',
     }
   })
@@ -14,7 +14,7 @@ async function main() {
   const pool = await prisma.pool.create({
     data: {
       title: 'Exemple Pool',
-      code: 'BOL123',
+      code: 'BOL321',
       ownerId: user.id,
 
       participants: {
@@ -27,17 +27,17 @@ async function main() {
 
   await prisma.game.create({
     data: {
-      date: '2022-11-01T16:00:00.913Z',
+      date: '2022-11-10T16:00:00.913Z',
       firstTeamCountryCode: 'DE',
-      secondTeamContryCode: 'BR',
+      secondTeamCountryCode: 'BR',
     }
   })
 
   await prisma.game.create({
     data: {
-      date: '2022-11-03T16:00:00.913Z',
+      date: '2022-11-09T16:00:00.913Z',
       firstTeamCountryCode: 'BR',
-      secondTeamContryCode: 'AR',
+      secondTeamCountryCode: 'AR',
 
       guesses: {
         create: {
